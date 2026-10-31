@@ -36,3 +36,17 @@ Dataset Size: 32.7 GB (TCIA training/validation image download)
 
 **Dataset licence and attribution:** BraTS-PEDs (Version 1, 2025), hosted by TCIA, is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). Data DOI: [10.7937/DX5C-TJ86](https://doi.org/10.7937/DX5C-TJ86). See [DATA_LICENSE.md](DATA_LICENSE.md) for the required dataset citation and usage links. This dataset licence does not license this repository's code.
 
+
+**Repository structure:**
+
+| Folder / file | Contents |
+| --- | --- |
+| `scripts/` | Data download, preprocessing and evaluation scripts |
+| `notebooks/` | Exploration and modelling notebooks (EDA, splits, models) |
+| `splits/` | Patient-level train/validation/test ID lists (fixed seed) |
+| `results/` | Metrics and run settings (no images, no model weights) |
+| `figures/` | Figures used in the reports |
+| `docs/model_card.md` | Model card: intended use, data, evaluation, limitations |
+| `requirements.txt` | Python dependencies (to be pinned) |
+
+MRI data are never committed; download them directly from TCIA (see the link above).
