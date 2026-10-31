@@ -27,9 +27,12 @@ Name: BraTS-PEDs - The Brain Tumor Segmentation in Pediatric Magnetic Resonance 
 
 Source: The Cancer Imaging Archive (TCIA)
 
-Subjects: 457
+Subjects: 457 in the full cohort (257 training, 91 validation, 109 hidden test); the TCIA image download covers 348 training/validation subjects.
 
-Dataset Size: 32.7 GB
+Dataset Size: 32.7 GB (TCIA training/validation image download)
 
 
 **Link to Data Set:** [TCIA BraTS-PEDs Collection](https://www.cancerimagingarchive.net/collection/brats-peds/)
+
+**Dataset licence and attribution:** BraTS-PEDs (Version 1, 2025), hosted by TCIA, is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). Data DOI: [10.7937/DX5C-TJ86](https://doi.org/10.7937/DX5C-TJ86). See [DATA_LICENSE.md](DATA_LICENSE.md) for the required dataset citation and usage links. This dataset licence does not license this repository's code.
+

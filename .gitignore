@@ -216,3 +216,25 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# MRI data and segmentations: keep local, never commit
+/data/
+/datasets/
+/local-data/
+BraTS-PED-*/
+BraTS-PEDs*/
+*.nii
+*.nii.gz
+*.dcm
+*.dicom
+
+# BraTS download archives, including common case variants
+[Bb][Rr][Aa][Tt][Ss]*.zip
+[Bb][Rr][Aa][Tt][Ss]*.tar
+[Bb][Rr][Aa][Tt][Ss]*.tar.gz
+[Bb][Rr][Aa][Tt][Ss]*.tgz
+[Bb][Rr][Aa][Tt][Ss]*.7z
+
+# Local inspection outputs
+/local-results/
+
