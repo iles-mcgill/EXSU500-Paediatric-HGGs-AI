@@ -1,0 +1,9 @@
+# Draft dependency list. Pin exact versions (pip freeze in the Colab/Kaggle
+# environment we actually use) before the final submission.
+numpy
+pandas
+matplotlib
+scikit-learn
+nibabel
+torch
+monai

@@ -1,0 +1,5 @@
+Source,train,val,test
+CBTN,80,18,18
+DFCI-BCH-BWH-PEDs-HGG,43,9,9
+DIPGr,56,12,12
+Total,179,39,39
