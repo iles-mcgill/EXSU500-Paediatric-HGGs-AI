@@ -1,24 +1,24 @@
 # EXSU500-Paediatric-HGGs-AI
-Automated 3D Multi-Class Image Segmentation of Paediatric High-Grade Gliomas from Multiparametric Magnetic Resonance Imaging (MRI) for Neurosurgical Navigation.
+Automated 3D Segmentation of Paediatric High-Grade Gliomas from Multiparametric Magnetic Resonance Imaging (MRI), with Potential Applications in Treatment Planning.
 
 
 **Team Members:** Itzel Priscilla Aguilar-Valdez, Steven Gill, Iles Ousmer, Ansar Tlemussov
 
 
 **Problem:**
-Paediatric central nervous system tumours, particularly high-grade gliomas, have a dismal prognosis, with a five-year survival rate historically sitting below 20% (TCIA, 2025). The surgical treatment of these tumours is exceptionally challenging because high-grade gliomas are diffuse and highly infiltrative. This makes it incredibly difficult to identify precise tumour margins during surgery, where the accidental resection of healthy neural networks can lead to severe neurological deficits or death.
+Paediatric central nervous system tumours, particularly high-grade gliomas, have a dismal prognosis, with a five-year survival rate below 20% (TCIA, 2025). These tumours are diffuse and highly infiltrative. Many cases in BraTS-PEDs are diffuse midline gliomas, including diffuse intrinsic pontine gliomas, for which surgical resection is generally not feasible; for selected non-pontine high-grade gliomas, resection remains an option, but precise tumour margins are difficult to identify and injury to healthy functional brain tissue can cause severe neurological deficits.
 
 Accurate delineation of tumor extent and its heterogeneous subregions on magnetic resonance imaging (MRI) is thus crucial for tumor characterization and treatment planning. However, manual three-dimensional tumor segmentation requires expert input, is time-consuming, and is susceptible to inter-observer variability (Odland et al., 2015).
 
-Our project therefore focuses on the automated 3D image segmentation of paediatric high-grade gliomas to generate precise, patient-specific anatomical maps that could potentially support preoperative neurosurgical planning and intraoperative image-guided navigation.
+Our project therefore focuses on the automated 3D segmentation of paediatric high-grade gliomas on MRI. Patient-specific tumour delineations could potentially support treatment planning, radiotherapy planning, response assessment and, where appropriate, biopsy or surgical planning. The project evaluates segmentation accuracy only; it does not test any clinical use.
 
 
 **Task Type:**
-Multi-class 3D Image Segmentation
+3D Image Segmentation. Primary target: whole tumour (the union of ET, NET, CC and ED). Secondary targets: the individual subregions.
 
 Input: Multiparametric brain MRI (T1, contrast-enhanced T1, T2, and T2-FLAIR).  
 
-Output: Voxel-wise segmentation of pediatric high-grade glioma subregions, which include enhancing tumor (ET), non-enhancing tumor (NET), cystic component (CC), and peritumoral edema (ED)
+Output: Voxel-wise whole-tumour segmentation (primary) and, as a secondary analysis, segmentation of the subregions: enhancing tumour (ET), non-enhancing tumour (NET), cystic component (CC) and peritumoral edema (ED).
 
 
 **Data Set:**
@@ -58,6 +58,6 @@ python scripts/describe_cohort.py   # results/cohort_summary.md, figures/cohort_
 python scripts/make_splits.py       # splits/train.txt, val.txt, test.txt (seed 42)
 ```
 
-The proposed split (to be agreed by the team before any model is trained) is patient-level (one baseline scan per subject) and stratified by data source. It uses the 257 TCIA training subjects, the only ones released with expert masks (the 91 validation subjects have no `seg` files).
+The split, agreed by the team before any model was trained, is patient-level (one baseline scan per subject) and stratified by data source. It uses the 257 TCIA training subjects, the only ones released with expert masks (the 91 validation subjects have no `seg` files).
 
 `python scripts/label_volumes.py --root <path to BraTS-PEDs-v1/Training>` summarises subregion volumes from the masks (`results/label_volume_summary.md`).
