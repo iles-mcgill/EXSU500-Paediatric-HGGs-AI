@@ -3,6 +3,40 @@
 Lead: Itzel Priscilla Aguilar-Valdez / Iles Ousmer
 Project: automated 3D segmentation of paediatric high-grade gliomas (BraTS-PEDs). Primary target: whole tumour (WT).
 
+## Search strategy
+
+**PubMed: structured search (MeSH + title/abstract terms)**
+- Date of search: 2026-11-08
+- Concepts combined with AND: (1) brain tumour/glioma, (2) paediatric population, (3) MRI, (4) AI/machine learning/deep learning, (5) segmentation
+- Query:
+
+```
+("Glioma"[Mesh] OR "Brain Neoplasms"[Mesh] OR glioma*[tiab] OR "brain tumor"[tiab] OR "brain tumors"[tiab] OR "brain tumour"[tiab] OR "brain tumours"[tiab])
+AND ("Infant"[Mesh] OR "Child, Preschool"[Mesh] OR "Child"[Mesh] OR "Adolescent"[Mesh] OR pediatric*[tiab] OR paediatric*[tiab] OR child*[tiab] OR adolescen*[tiab])
+AND ("Magnetic Resonance Imaging"[Mesh] OR MRI[tiab] OR "magnetic resonance"[tiab])
+AND ("Artificial Intelligence"[Mesh] OR "Machine Learning"[Mesh] OR "Deep Learning"[Mesh] OR "Neural Networks, Computer"[Mesh] OR "artificial intelligence"[tiab] OR "machine learning"[tiab] OR "deep learning"[tiab] OR "random forest"[tiab] OR "random forests"[tiab] OR "U-Net"[tiab] OR UNet[tiab] OR nnUNet[tiab])
+AND ("Image Processing, Computer-Assisted"[Mesh] OR segment*[tiab] OR delineat*[tiab])
+```
+
+- Filters: [e.g. 2021–2026, English]
+- Results: [number of records] → [screened by title/abstract] → [included]
+
+**PubMed: keyword search**
+- Query: (pediatric brain tumor segmentation deep learning) AND (nnU-Net glioma segmentation)
+
+**Connected Papers**
+- Seed paper: Cariola et al., "Deep learning strategies for semantic segmentation of pediatric brain tumors in multiparametric MRI," Sci Rep 2025.
+- Graph: https://www.connectedpapers.com/main/0baaf28648e1147d8b291f5af4035e5cac86d174/Deep-learning-strategies-for-semantic-segmentation-of-pediatric-brain-tumors-in-multiparametric-MRI/graph
+
+**Inclusion criteria**
+- Primary research, preferably published 2021 onward
+- Segmentation of paediatric brain tumours on MRI, or foundational benchmark/methods papers (BraTS, nnU-Net, evaluation metrics)
+- Reviews used only as supporting sources
+
+**Use of generative AI**
+Claude Opus 5.5 (Anthropic) was used to search for additional candidate papers, compare them with the PubMed and Connected Papers results.
+All entries were checked against the original publications by the team member listed under "Read by".
+
 ## Paper table
 
 | # | Paper | Year | Type | Tumour / population | Data (n) | Model | Metric + result | Split | Limitation | Read by | Relevance |
